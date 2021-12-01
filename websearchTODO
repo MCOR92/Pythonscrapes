@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+#Working on a few webscrapes this is my starting point, want to have a back and fourth and list of options to view each result, may become a data search with some more functions.
+
+query  = input("What are you searching for?: ") 
+
+try:
+    from googlesearch import search
+except ImportError:
+    print("No module named 'google' found")
+
+
+# to search
+search(query)
+
+for j in search(query, tld="co.in", num=5, stop=5, pause=2):
+    print(j)
